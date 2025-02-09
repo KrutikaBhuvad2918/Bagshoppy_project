@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag Shop</title>
+    <link rel="stylesheet" href="practice.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+    />
+    <!-- Font Awesome for Search Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">BagShop</div>
+        <nav>
+            <ul>
+                <div class="nav-container">
+                    <li><a href="#categories">Categories</a></li>
+                    <li class="search-box">
+                    <input type="text" placeholder="Search Products...">
+                <button><i class="fas fa-search"></i></button>
+                </li>
+                </div>
+                <div class="nav-items">
+                    <li><a href="#">Account </a><i class="ri-account-circle-fill"></i></li>
+                    <li><a href="#">Cart </a><i class="ri-shopping-cart-2-fill"></i></li>
+                    <li><a href="#">Contact </a><i class="ri-phone-fill"></i></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+    <div class="slider">
+        <div class="slides">
+            <div><img src="msgimg.jpeg" alt="Slide 1">
+                <div id="tag-line">
+                    <h1>Pack Smart, Travel Far!</h1>
+                    <p>Life is journey-make sure you're packed for it! Our collection of premium bags ensures you travel in style and comfort.</p>
+                </div>
+            </div>
+            <img src="bagpose1.jpeg" alt="Slide 2">
+            <img src="bagpose1.jpeg" alt="Slide 3">
+        </div>
+
+        <!-- <div class="slider">
+            <div class="slides">
+                <div>
+                    <img src="msgimg.jpeg" alt="Slide 1">
+                    <div class="tag-line">
+                        <h1>Pack Smart, Travel Far!</h1>
+                        <p>Life is a journey—make sure you're packed for it! Our collection of premium bags ensures you travel in style and comfort.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="bagpose1.jpeg" alt="Slide 2">
+                    <div class="tag-line">
+                        <h1>Adventure Awaits!</h1>
+                        <p>Find the perfect travel companion with our stylish and durable bags.</p>
+                    </div>
+                </div>
+                <div>
+                    <img src="bagpose1.jpeg" alt="Slide 3">
+                    <div class="tag-line">
+                        <h1>Designed for Every Journey</h1>
+                        <p>From backpacks to travel bags, we've got you covered.</p>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+        
+         <!-- Prev and Next buttons -->
+         <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+         <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    
+    <section id="categories" class="category-section">
+        <h1 class="ctry-title">Categories</h1>
+    <div class="categories">
+        <div class="first">
+            <button class="first-category" onclick="window.location.href='clutches.html';"></button>
+            <h2 class="name">Clutches</h2>
+        </div>
+        <div class="first">
+            <button class="second-category" onclick=""></button>
+            <h2 class="name">Side-Bags</h2>
+        </div>
+        <div class="first">
+            <button class="third-category" onclick=""></button>
+            <h2 class="name">Hand-Bags</h2>
+        </div>
+        <div class="first">
+            <button class="fourth-category" onclick=""></button>
+            <h2 class="name">Backpacks</h2>
+        </div>
+        <div class="first">
+            <button class="fifth-category" onclick=""></button>     
+            <h2 class="name">Travel-Bags</h2>
+        </div>
+    </div>
+    </section>
+
+    <div class="image">
+       <div class="description">
+        <h1 class="tagline">UNCOVER THE LIFESTYLE OF ONE BAG.</h1>
+        <p class="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae hic repudiandae est harum nobis temporibus, itaque possimus quo ducimus? Alias ratione, accusantium tenetur iste iure a exercitationem perspiciatis harum nesciunt.</p>
+       </div>
+    </div>
+    <script>
+        let slideIndex = 0;
+    const slides = document.querySelector('.slides');
+
+    function moveSlide(step) {
+        slideIndex += step;
+        if (slideIndex >= 3) slideIndex = 0;  // Loop to first slide
+        if (slideIndex < 0) slideIndex = 2;   // Loop to last slide
+        slides.style.transform = `translateX(${-slideIndex * 100}vw)`;
+    }
+
+// Optional: Auto-slide every 3 seconds (same as before)
+setInterval(() => moveSlide(1), 3000);
+
+    </script>
+
+</body>
+</html>

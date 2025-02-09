@@ -1,0 +1,297 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    /* background-color:rosybrown ; */
+    padding: 15px 20px;
+    border-bottom: 2px solid #ccc;
+}
+/* Logo */
+.logo {
+    font-size: 30px;
+    font-weight: bold;
+   margin: 0rem 4rem; /* Space between logo and nav */
+}
+/* Navigation container beside logo */
+.nav-container {
+    width: 60rem;
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Allows it to expand next to the logo */
+    justify-content: space-between;
+    padding-left: 10px;
+}
+.nav-tap{
+    width: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Navigation links */
+nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px; 
+}
+nav ul li a {
+    font-weight: 700;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+.nav-items{
+    margin-left: 7rem;
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+}
+/* Search Box */
+.search-box {
+    position: relative;
+}
+.search-box input {
+    padding: 10px 35px 10px 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    width: 20rem;
+}
+.search-box input:focus {
+    width: 35rem; /* Expands to the left */
+}
+
+.search-box button {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    background: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+.search-box i{
+    font-size: 20px;
+}
+.nav-items i{
+    font-size: 25px;
+}
+
+.first-category{
+    /*position: absolute;*/
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    /* background-color: pink; */
+    background-image: url("https://images.pexels.com/photos/15432831/pexels-photo-15432831/free-photo-of-elegant-handbag-with-chain-handle.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+}
+.second-category{
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    /* background-color: pink; */
+    background-image: url("https://images.pexels.com/photos/1270015/pexels-photo-1270015.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-style: none;
+}
+.third-category{
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    /* background-color: pink; */
+    background-image: url("https://images.pexels.com/photos/23223849/pexels-photo-23223849/free-photo-of-woman-hand-holding-bags.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-style: none;
+}
+.fourth-category{
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    /* background-color: pink; */
+    background-image: url("https://images.pexels.com/photos/2905238/pexels-photo-2905238.jpeg?auto=compress&cs=tinysrgb&w=600");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-style: none;
+}
+.fifth-category{
+    height: 14rem;
+    width: 14rem;
+    border-radius: 50%;
+    /* background-color: pink; */
+    background-image: url("https://images.pexels.com/photos/8276907/pexels-photo-8276907.jpeg?auto=compress&cs=tinysrgb&w=600&lazy=load");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-style: none;
+}
+
+.categories{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0rem 1rem;
+}
+img{
+    height: 70vh;
+    width: 99vw;
+    background-size: cover;
+}
+
+.ctry-title{
+    font-size: 2rem;
+    text-align: start;
+    font-weight: 700;
+    padding: 2.5rem 4.6rem;
+    /* padding: 40px 0px;
+    padding-left: 1rem; */
+    margin-top: 1rem;
+}
+.name{
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 15px 0px;
+}
+/* .first{
+    display: flex;
+    flex-direction: column;
+
+} */
+
+.image{
+    height: 60vh;
+    width: 90vw;
+    background-image: url("home-bag.jpg"); 
+    /* background-image: linear-gradient(to right, rgba(42, 39, 39, 0.5),rgba(43, 38, 38, 0.5)),url("home-bag.jpg"); */
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    border-radius: 20px;
+    margin: 2rem 4.6rem;
+}
+.description{
+    position: relative;
+    bottom: -15rem;
+    left: 18rem;
+    height: 10rem;
+    width: 50rem;
+    /* background-color: black; */
+    background: linear-gradient(to right, rgba(42, 39, 39, 0.7),rgba(43, 38, 38, 0.7));
+    text-align: center;
+    align-items: center;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.tagline{
+    color: white;
+}
+.para{
+    width: 33rem;
+    line-height: 1.3rem;
+    color: rgb(205, 201, 201);  
+}
+
+
+/* Category Buttons */
+.first-category,
+.second-category,
+.third-category,
+.fourth-category,
+.fifth-category {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-style: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add a glossy effect with a moving gradient overlay in a cross pattern */
+.first-category::before,
+.second-category::before,
+.third-category::before,
+.fourth-category::before,
+.fifth-category::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 70%) 0% 0%, linear-gradient(to bottom, rgba(255, 255, 255, 0.3) 30%, rgba(255, 255, 255, 0.1) 50%, rgba(255, 255, 255, 0.3) 70%) 0% 0%;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    animation: glossEffect 2s infinite linear;
+    pointer-events: none; /* Prevents the overlay from interfering with clicks */
+}
+
+/* Glossy animation */
+@keyframes glossEffect {
+    0% {
+        transform: translateX(-100%) ;
+    }
+    100% {
+        transform: translateX(100%) ;
+    }
+}
+
+/* Shiny effect when hovered */
+.first-category:hover,
+.second-category:hover,
+.third-category:hover,
+.fourth-category:hover,
+.fifth-category:hover {
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
+    transform: scale(1.05);
+}
+
+#containerSlider
+        {
+            margin: auto;
+            width: 90%;
+            text-align: center;
+            padding-top: 50px;
+            box-sizing: border-box;
+        }
+        #containerSlider img
+        {
+            width: 100%;
+            height: 140%;
+            text-align: center;
+            align-content: center;
+        }
+        @media(max-width: 732px)
+        {
+            #containerSlider img
+            {
+                height: 12em;
+            }
+        }
+        @media(max-width: 500px)
+        {
+            #containerSlider img
+            {
+                height: 10em;
+            }
+        }

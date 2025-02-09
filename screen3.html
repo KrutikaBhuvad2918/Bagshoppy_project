@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="screen3.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="logo">Shopcart</div>
+        <nav>
+            <a href="#">Categories</a>
+            <a href="#">Deals</a>
+            <a href="#">What's New</a>
+            <a href="#">Delivery</a>
+        </nav>
+        <div class="search-bar">
+            <input type="text" placeholder="Search Product">
+        </div>
+        <div class="user-options">
+            <a href="#">Account</a>
+            <a href="#">Cart</a>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="#">Electronics</a> / 
+        <a href="#">Audio</a> / 
+        <a href="#">Headphones</a> / 
+        <a href="#">Shop Headphones by type</a> / 
+        <strong>Airpods-Max</strong>
+    </div>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <div class="product-image">
+            <img src="images/bag2.jpeg" alt="Airpods Max">
+            <div class="image-thumbnails">
+                <img src="images/bag1.jpeg" alt="">
+                <img src="images/bag2.jpeg" alt="">
+                <img src="images/bag1.jpeg" alt="">
+                <img src="images/bag2.jpeg" alt="">
+            </div>
+        </div>
+        <div class="product-info">
+            <h1>Airpods- Max</h1>
+            <p>A perfect balance of exhilarating high-fidelity audio and the effortless magic of AirPods.</p>
+            <p class="rating">⭐⭐⭐⭐⭐ (121)</p>
+            <p class="price">$549.00</p>
+
+            <h3>Choose a Color</h3>
+            <div class="color-options">
+                <span class="color red"></span>
+                <span class="color black"></span>
+                <span class="color green"></span>
+                <span class="color white"></span>
+                <span class="color blue"></span>
+            </div>
+
+            <div class="quantity">
+                <button>-</button>
+                <span>1</span>
+                <button>+</button>
+            </div>
+
+            <!-- <p class="stock">Only <span class="highlight">12 Items</span> Left! Don’t miss it</p> -->
+
+            <button class="buy-now">Buy Now</button>
+            <button class="add-to-cart">Add to Cart</button>
+
+            <div class="delivery-info">
+                <p>🚚 <strong>Free Delivery</strong> <br>Enter your postal code for Delivery Availability</p>
+                <p>🔄 <strong>Return Delivery</strong><br> Free 30-days Delivery Returns. <a href="#">Details</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    // Color selection
+    const colorOptions = document.querySelectorAll(".color");
+    colorOptions.forEach(color => {
+        color.addEventListener("click", function () {
+            document.querySelectorAll(".color").forEach(c => c.style.border = "2px solid #ddd");
+            this.style.border = "2px solid black";
+        });
+    });
+
+    // Quantity control
+    const minusBtn = document.querySelector(".quantity button:nth-child(1)");
+    const plusBtn = document.querySelector(".quantity button:nth-child(3)");
+    const quantitySpan = document.querySelector(".quantity span");
+
+    let quantity = 1;
+    minusBtn.addEventListener("click", function () {
+        if (quantity > 1) {
+            quantity--;
+            quantitySpan.textContent = quantity;
+        }
+    });
+
+    plusBtn.addEventListener("click", function () {
+        quantity++;
+        quantitySpan.textContent = quantity;
+    });
+
+    // Thumbnail image selection
+    const mainImage = document.querySelector(".images/bag1.png");
+    const thumbnails = document.querySelectorAll(".images/bag2.png");
+
+    thumbnails.forEach(thumbnail => {
+        thumbnail.addEventListener("click", function () {
+            mainImage.src = this.src;
+        });
+    });
+
+    // Add to Cart Button Alert
+    document.querySelector(".add-to-cart").addEventListener("click", function () {
+        alert("Product added to cart!");
+    });
+
+    // Buy Now Button Alert
+    document.querySelector(".buy-now").addEventListener("click", function () {
+        alert("Proceeding to checkout...");
+    });
+});
+
+    </script>
+</body>
+</html>

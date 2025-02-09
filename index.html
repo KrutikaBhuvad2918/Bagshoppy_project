@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bag Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <!-- Font Awesome for Search Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <link rel="icon" href="https://yt3.ggpht.com/a/AGF-l78km1YyNXmF0r3-0CycCA0HLA_i6zYn_8NZEg=s900-c-k-c0xffffffff-no-rj-mo" type="image/gif" sizes="16x16">
+    <!-- EXTERNAL LINKS -->
+    <script src="http://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">BagShop</div>
+        <nav>
+            <ul>
+                <div class="nav-container">
+                    <div class="nav-tap">
+                        <li><a href="categories">Home</a></li>
+                        <li><a href="categories">Categories</a></li>
+                        <li><a href="categories">Contact</a></li>
+                    </div>
+                    <li class="search-box">
+                    <input type="text" placeholder="Search Products...">
+                <button><i class="fas fa-search"></i></button>
+                </li>
+                </div>
+                <div class="nav-items">
+                    <li><a href="#"> </a><i class="ri-shopping-cart-2-fill"></i></li>
+                    <li><a href="#"> </a><i class="ri-account-circle-fill"></i></li>
+                </div>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- <div class="home-images">
+        <img src="https://images.pexels.com/photos/9408666/pexels-photo-9408666.jpeg?auto=compress&cs=tinysrgb&w=600"/>
+
+    </div> -->
+
+    <section>
+        <div id="containerSlider">
+            <div id="slidingImage"> <img src="img1.png" alt="image1"> </div>
+            <div id="slidingImage"> <img src="img2.png" alt="image2"> </div>
+            <div id="slidingImage"> <img src="img3.png" alt="image3"> </div>
+            <div id="slidingImage"> <img src="img4.png" alt="image4"> </div>
+        </div>
+</section>
+
+    <h1 class="ctry-title">Categories</h1>
+    <div class="categories">
+        <div class="first">
+            <button class="first-category" onclick=""></button>
+            <h2 class="name">Cluches</h2>
+        </div>
+        <div class="first">
+            <button class="second-category" onclick=""></button>
+            <h2 class="name">Side Bag</h2>
+        </div>
+        <div class="first">
+            <button class="third-category" onclick=""></button>
+            <h2 class="name">Purses</h2>
+        </div>
+        <div class="first">
+            <button class="fourth-category" onclick=""></button>
+            <h2 class="name">BagPack</h2>
+        </div>
+        <div class="first">
+            <button class="fifth-category" onclick=""></button>     
+            <h2 class="name">Travel Bag</h2>
+        </div>
+    </div>
+
+    <div class="image">
+       <div class="description">
+        <h1 class="tagline">UNCOVER THE LIFESTYLE OF ONE BAG.</h1>
+        <p class="para">Explore the simplicity and convenience of the One Bag lifestyle, designed for mimimalists. Learn how to pack efficiently, travel light, and enjoy freedom on your adventure.</p>
+       </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+        $('#containerSlider').slick({
+            dots: true,
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            });
+        });
+    </script>
+</body>
+</html>
