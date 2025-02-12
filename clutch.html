@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Cards</title>
-    <link rel="stylesheet" href="screen.css">
+    <link rel="stylesheet" href="clutch.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     
 
@@ -37,7 +37,7 @@
                 <img src="images/bag2.jpeg" alt="Macbook Pro 13">
                 <div class="name-price">
                     <h3>Macbook Pro 13"</h3>
-                    <p>&#8377; 239.00</p>
+                    <p>&#8377; 300.00</p>
                 </div>
                 <p class="product-specification">Wireless, Noise Cancelling, 20-hour battery</p>
     
@@ -257,5 +257,23 @@
             });
         });
     </script>
+
+<script>
+    document.querySelectorAll('.product-card').forEach(card => {
+        card.addEventListener('click', function () {
+            const product = {
+                name: this.querySelector('.name-price h3').innerText,
+                price: this.querySelector('.name-price p').innerText,
+                image: this.querySelector('img').src,
+                description: this.querySelector('.product-specification').innerText,
+                rating: this.querySelector('.product-rating').innerHTML
+            };
+
+            localStorage.setItem('selectedProduct', JSON.stringify(product));
+            window.location.href = 'product-details.html'; // Redirect to the details page
+        });
+    });
+</script>
+
 </body>
 </html>
