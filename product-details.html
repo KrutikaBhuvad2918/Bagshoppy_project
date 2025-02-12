@@ -6,30 +6,37 @@
     <title>Product Page</title>
     <link rel="stylesheet" href="screen3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css"/>
 </head>
 <body>
     <header>
-        <div class="logo">Shopcart</div>
+        <div class="logo">BagShop</div>
         <nav>
-            <a href="#">Categories</a>
-            <a href="#">Deals</a>
-            <a href="#">What's New</a>
-            <a href="#">Delivery</a>
+            <ul>
+                <div class="nav-container">
+                    <div class="nav-tap">
+                        <li><a href="categories">Home</a></li>
+                        <li><a href="#categories">Categories</a></li>
+                        <li><a href="categories">Contact</a></li>
+                    </div>
+                    <li class="search-box">
+                    <input type="text" placeholder="Search Products...">
+                <button><i class="fas fa-search"></i></button>
+                </li>
+                </div>
+                <div class="nav-items">
+                    <li><a href="#"> </a><i class="ri-shopping-cart-2-fill"></i></li>
+                    <li><a href="#"> </a><i class="ri-account-circle-fill"></i></li>
+                </div>
+            </ul>
         </nav>
-        <div class="search-bar">
-            <input type="text" placeholder="Search Product">
-        </div>
-        <div class="user-options">
-            <a href="#">Account</a>
-            <a href="#">Cart</a>
-        </div>
     </header>
 
     <div class="breadcrumb">
-        <a href="#">Electronics</a> / 
-        <a href="#">Audio</a> / 
+        <a href="index.html">Home</a> /
+        <a href="clutch.html" id="breadcrumb-category">it's types</a> /
         <strong id="breadcrumb-name">Product Name</strong>
-    </div>
+    </div>    
 
     <div class="product-container">
         <div class="product-image">
@@ -43,14 +50,15 @@
         </div>
         <div class="product-info">
             <h1 id="product-name">Product Name</h1>
-            <p>A perfect balance of high-fidelity audio and premium experience.</p>
-            <p class="rating">
+            <p id="product-specification"></p>
+            
+            <!-- <p class="rating">
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star"></i>
                 <i class="fas fa-star-half-alt"></i> (121)
-            </p>
+            </p> -->
             <p class="price" id="product-price">$0.00</p>
 
             <h3>Choose a Color</h3>
@@ -81,6 +89,7 @@
                 document.getElementById('product-price').textContent = "" + productData.price;
                 document.getElementById('main-image').src = productData.image;
                 document.getElementById('breadcrumb-name').textContent = productData.name;
+                document.getElementById('product-specification').textContent = productData.description;
             }
 
             document.getElementById("minus-btn").addEventListener("click", function () {
@@ -104,5 +113,17 @@
             });
         });
     </script>
+    <!-- <script>
+            document.addEventListener("DOMContentLoaded", function () {
+        const productData = JSON.parse(localStorage.getItem('selectedProduct'));
+
+        if (productData) {
+            document.getElementById('breadcrumb-name').textContent = productData.name;
+            document.getElementById('breadcrumb-category').textContent = productData.category;
+            document.getElementById('breadcrumb-category').href = "category.html?cat=" + encodeURIComponent(productData.category);
+        }
+    });
+
+    </script> -->
 </body>
 </html>

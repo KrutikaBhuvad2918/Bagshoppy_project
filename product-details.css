@@ -7,7 +7,7 @@
 }
 
 /* Header */
-header {
+/* header {
     display: flex;
     justify-content: space-between;
     padding: 15px 40px;
@@ -30,7 +30,7 @@ nav a, .user-options a {
 .search-bar input {
     padding: 8px;
     width: 200px;
-}
+} */
 
 /* Breadcrumb */
 .breadcrumb {
